@@ -3,10 +3,11 @@ try:
     mydb = mysql.connector.connect(
     host="localhost",
     user="sqluser",
-    password="password",
-    database="alx_book_store"
+    password="password"
 )
-    print(f"Database '{mydb.database}' created successfully!")
+    mycursor = mydb.cursor()
+    mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
+    print(f"Database 'alx_book_store' created successfully!")
 except:
     print("error")
 finally:
