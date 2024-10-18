@@ -8,8 +8,8 @@ try:
     mycursor = mydb.cursor()
     mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
     print(f"Database 'alx_book_store' created successfully!")
-except:
-    print("error")
+except mysql.connector.Error as e:
+    print(f"error: {e}")
 finally:
     if mydb.connect:
         mydb.close()
