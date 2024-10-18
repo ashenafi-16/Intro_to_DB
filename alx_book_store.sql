@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 use alx_book_store;
 CREATE TABLE Customers (
-    customer_id INT PRIMARY KEY,  -- Specify the data type for customer_id
+    customer_id INT PRIMARY KEY,  
     customer_name VARCHAR(215),
     email VARCHAR(215),
     address TEXT 
